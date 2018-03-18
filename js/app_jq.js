@@ -61,8 +61,65 @@ k13.addEventListener("click", function() { wywołanieKarty(13); });
 k14.addEventListener("click", function() { wywołanieKarty(14); });
 k15.addEventListener("click", function() { wywołanieKarty(15); });
 
+//początek gry
+//jest "false", bo jeszcze żadna nie jest odkryta
 var jednaOdkryta = false;
+//to początek, więc narazie nie wykonano żadnego ruchu
 var ruchy = 0;
+//to nada odkrytej karcie numer, pózniej się on przyda
 var odkryta_nr;
+//blokada wyłączona, żeby wogóle można było coś zrobić
 var blokada = false;
+//żeby wygrać trzeba znalezć 8 par, licznik ten odlicza od 8 do 0
 var pozostałePary = 8;
+
+
+//pokazanie karty działa jako zmiana jej wygłądu w css'ie
+function wywołanieKarty(nr) {
+	var wartośćWidoczności = $('#k'+nr).css('opacity');
+
+/* tutaj jest kod dotyczący blokady, bo po wybraniu dwóch kart można szybko dalej odsłaniać, a w ten sposób można odsłonić tylko dwie
+i licznik dodaje kolejną próbę */
+	if (wartośćWidoczności != 0 && blokada == false) {
+		blokada = true;
+
+//ta wartość zmienia kartę z pytajnikiem na odpowiedni obrazek z katologu img
+		var obraz = "url(img/" + karty[nr] + ")";
+
+//za pomocą jQuery zmienia się klasa z "karta" na "kartaA", i widać co się wybrało
+		$('#k'+nr).css('background-image', obraz);
+		$('#k'+nr).addClass('kartaA');
+		$('#k'+nr).removeClass('karta');
+
+		//to dotyczy pierwszej, odkrytej karty
+		if(jednaOdkryta == false) {
+			//jedna jest odkryta
+			jednaOdkryta = true;
+			//teraz otrzymuje ona numer
+			odkryta_nr = nr;
+			//blokada jest wyłączona, żeby można było wybrać drugą kartę
+			blokada = false;
+		}
+		/*to dotyczy drugiej odkrytej karty, i sprawdza czy jest taka sama jak pierwsza czy inna, i co trzeba wtedy zrobić */
+		else {
+
+			//jeśli sa takie same to są niewidoczne, i wyglada to jak by zniknęły
+			if(karty[odkryta_nr] == karty[nr]) {
+			//to jest czas pozostania na planszy kart, żeby gracz zdążył zobaczyć jakie zniknęły
+				setTimeout(function() { ukryjDwieKarty(nr, odkryta_nr) }, 800);
+
+			}
+			//jeżeli wybrał dwie inne karty to przez sekundę zostają widoczne, a pózniej znowu widać pytajnik
+			else {
+
+				setTimeout(function() { przywróćDwieKarty(nr, odkryta_nr) }, 1000);
+			}
+			// za pomącą jQery można dostać się do elementu za pomocą html, i zmienić 0 na prawidłową liczbę ruchów
+			ruchy++;
+			$('.wynik').html('Próby: '+ruchy);
+			jednaOdkryta = false;
+		}
+
+	}
+
+}
