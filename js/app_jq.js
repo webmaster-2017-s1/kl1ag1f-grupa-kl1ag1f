@@ -141,3 +141,17 @@ function ukryjDwieKarty(nr1, nr2) {
 	//blokada wyłączona, żeby po złym ruchu można było dalej grać
 	blokada = false;
 }
+
+//odwrotnie jak poprzednio zamiast obrazków będzie widać pytajnik, dzieje się to za pomocą jQery przez wygląd kart w css'ie
+function przywróćDwieKarty(nr1, nr2) {
+	$('#k'+nr1).css('background-image', 'url(img/karta.jpg)');
+	$('#k'+nr1).addClass('karta');
+	$('#k'+nr1).removeClass('kartaA');
+
+	$('#k'+nr2).css('background-image', 'url(img/karta.jpg)');
+	$('#k'+nr2).addClass('karta');
+	$('#k'+nr2).removeClass('kartaA');
+
+//blokada wyłączona, żeby możnabyło dalej grać
+	blokada = false;
+}
