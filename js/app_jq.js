@@ -1,4 +1,4 @@
-// kod projektu [wpisz nazwę]
+// kod projektu gra memory
 $(document).ready(function(){
     ;
 });
@@ -60,3 +60,9 @@ k12.addEventListener("click", function() { wywołanieKarty(12); });
 k13.addEventListener("click", function() { wywołanieKarty(13); });
 k14.addEventListener("click", function() { wywołanieKarty(14); });
 k15.addEventListener("click", function() { wywołanieKarty(15); });
+
+var jednaOdkryta = false;
+var ruchy = 0;
+var odkryta_nr;
+var blokada = false;
+var pozostałePary = 8;
