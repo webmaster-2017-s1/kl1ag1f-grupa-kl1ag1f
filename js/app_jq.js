@@ -123,3 +123,21 @@ i licznik dodaje kolejną próbę */
 	}
 
 }
+
+//jeżeli gracz wybrał inne karty to ta funkcja zamienia obrazki na pytajnik
+function ukryjDwieKarty(nr1, nr2) {
+	$('#k'+nr1).css('opacity', '0');
+	$('#k'+nr2).css('opacity', '0');
+
+//trzeba odkryć 8 par, a zły ruch nie może zmieniać tej wartości
+	pozostałePary--;
+
+//jeżeli gracz znalazł 8 par, to licznik wyliczył "0 pozostałych par", to oznacza zwycięstwo
+	if(pozostałePary == 0) {
+		// tutaj tablica zniknie, i wyswietli sie taki komunikat
+		$('.tablica').html('<h1>Wygrałeś!<br>Udało Ci się w '+ruchy+' ruchach<br>Brawo!</h1>');
+	}
+
+	//blokada wyłączona, żeby po złym ruchu można było dalej grać
+	blokada = false;
+}
