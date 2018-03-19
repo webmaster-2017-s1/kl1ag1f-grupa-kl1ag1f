@@ -135,7 +135,7 @@ function ukryjDwieKarty(nr1, nr2) {
 //jeżeli gracz znalazł 8 par, to licznik wyliczył "0 pozostałych par", to oznacza zwycięstwo
 	if(pozostałePary == 0) {
 		// tutaj tablica zniknie, i wyswietli sie taki komunikat
-		$('.tablica').html('<h1>Wygrałeś!<br>Udało Ci się w '+ruchy+' ruchach<br>Brawo!</h1>');
+		$('.tablica').html('<h1>Wygrałeś!<br>Udało Ci się w '+ruchy+' ruchach.<br>Brawo!</h1>');
 	}
 
 	//blokada wyłączona, żeby po złym ruchu można było dalej grać
