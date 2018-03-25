@@ -37,6 +37,10 @@
         td {
           border: 7px solid white;
         }
+
+        .przycisk {
+          margin-top: 15px;
+        }
       </style>
 
 
@@ -80,7 +84,7 @@
             numClick = 2;
             second = card;
             document.images[card].src = cards[card];
-            timer = setInterval(control,500);
+            timer = setInterval(control,1000);
           }
         }
 
@@ -151,6 +155,11 @@
       </tr>
 
     </table>
+
+    <div class="przycisk">
+        <input type="button" value="Nowa gra" onClick="location.reload();" />
+    </div>
+
   </center>
 
 
