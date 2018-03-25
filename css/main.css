@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #200;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -89,7 +89,7 @@ textarea {
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
-    color: #000;
+    color: #100;
     padding: 0.2em 0;
 }
 
@@ -98,12 +98,11 @@ textarea {
    ========================================================================== */
 
 ul.menu li {
-  display: inline; padding-left: 20px;
+  display: inline;
+  padding-left: 20px;
 }
 
-.menu {
-  text-align: center;
-}
+
 
 
 
@@ -308,9 +307,12 @@ body {
 }
 
 a:link    {
-	color: ; text-decoration: none; }
+	color: lightgrey;
+  text-decoration: none;
+}
 a:visited {
- 	color: #ff0000; }
+ 	color: lightgrey;
+ 	 }
 
 h1 {
 	font-size: 64px;
@@ -391,6 +393,16 @@ input {
 	letter-spacing: 2px;
 }
 
+body {
+  background-color: navy;
+  color: lightgrey;
+}
+
+.menu {
+  text-align: center;
+  background-color: maroon;
+  padding: 30px;
+}
 
 
 
