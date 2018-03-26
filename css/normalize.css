@@ -44,11 +44,6 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-div.header {
-  width: 20px;
-  height: 20px;
-  clear:  none;
-}
 
 h1 {
   font-size: 2em;
@@ -460,20 +455,22 @@ template {
   display: none;
 }
 .img1 {
-margin-right: 15vh;
-height: 50%;
-width: 50%;
+margin-left: 20vh;
+margin-right: 0vh;
+height: 70%;
+width: 67%;
 }
 
 .img2 {
-  margin-left: 15vh;
-  height: 50%;
-  width: 50%;
+  margin-left: 7vh;
+  margin-right: 2vh;
+  height: 70%;
+  width: 77%;
 }
 
 .slawek {
   display: inline-flex;
-  font-size: 40%;
+  font-size: 70%;
 }
 
 .div {
