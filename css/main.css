@@ -334,6 +334,7 @@ p {
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
+  margin-top: 70px;
 	text-align: center;
 }
 
@@ -403,8 +404,6 @@ body {
   background-color: maroon;
   padding: 30px;
 }
-
-
 
 
 /* css do gry p5 /*
