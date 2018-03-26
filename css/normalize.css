@@ -29,7 +29,7 @@ body {
 /**
  * Add the correct display in IE 9-.
  */
-
+i
 article,
 aside,
 footer,
@@ -43,6 +43,12 @@ section {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
+
+div.header {
+  width: 20px;
+  height: 20px;
+  clear:  none;
+}
 
 h1 {
   font-size: 2em;
@@ -219,6 +225,14 @@ audio:not([controls]) {
 
 img {
   border-style: none;
+}
+
+.obraz1 {
+  margin-left: 50px;
+}
+
+.obraz2 {
+  margin-right: 50px;
 }
 
 /**
@@ -444,4 +458,24 @@ template {
 
 [hidden] {
   display: none;
+}
+.img1 {
+margin-right: 15vh;
+height: 50%;
+width: 50%;
+}
+
+.img2 {
+  margin-left: 15vh;
+  height: 50%;
+  width: 50%;
+}
+
+.slawek {
+  display: inline-flex;
+  font-size: 40%;
+}
+
+.div {
+  display: inline;
 }
