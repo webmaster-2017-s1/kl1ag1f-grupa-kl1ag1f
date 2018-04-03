@@ -18,6 +18,7 @@ karty = shuffleArray(karty);
 
 
 //każda karta ma swoją wartość
+//wyszukiwanie odpowiednich kart za pomocą identyfikatorów (id)
 
 var k0 = document.getElementById('k0');
 var k1 = document.getElementById('k1');
